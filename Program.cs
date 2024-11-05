@@ -43,7 +43,6 @@
         }
         static MyMatrix Input()
         {
-            Console.WriteLine("1 - копія з іншого MyMatrix");
             Console.WriteLine("2 - ввести самостійно двовимірний масив");
             Console.WriteLine("3 - ввести зубчастий масив");
             Console.WriteLine("4 - ввести масив рядків");
@@ -53,24 +52,6 @@
 
             switch (choice)
             {
-                case 1:
-                    Console.Write("К-сть рядків та стовпчиків: ");
-                    string[] data1 = Console.ReadLine().Trim().Split();
-                    int rows1 = int.Parse(data1[0]);
-                    int cols1 = int.Parse(data1[1]);
-
-                    double[,] elements1 = new double[rows1, cols1];
-                    Console.WriteLine("Введіть елементи матриці: ");
-                    for (int i = 0; i < rows1; i++)
-                    {
-                        for (int j = 0; j < cols1; j++)
-                        {
-                            elements1[i, j] = double.Parse(Console.ReadLine());
-                        }
-                    }
-                    originalMatrix = new MyMatrix(elements1);
-                    return originalMatrix;
-
                 case 2:
                     Console.Write("К-сть рядків та стовпчиків: ");
                     string[] data2 = Console.ReadLine().Trim().Split();
